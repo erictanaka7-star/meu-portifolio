@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Driver Prime</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Montserrat',sans-serif;
+}
+
+body{
+  background:#050816;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+  min-height:100vh;
+  padding:40px;
+  background:
+  linear-gradient(to right, rgba(5,8,22,0.95), rgba(5,8,22,0.65)),
+  url('https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+}
+
+.container{
+  width:100%;
+  max-width:1250px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 430px;
+  gap:50px;
+  align-items:center;
+}
+
+/* LEFT */
+
+.left span{
+  background:#06b6d4;
+  color:#001018;
+  padding:10px 18px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:700;
+  display:inline-block;
+  margin-bottom:25px;
+}
+
+.left h1{
+  font-size:70px;
+  line-height:1;
+  margin-bottom:25px;
+}
+
+.left h1 b{
+  color:#06b6d4;
+}
+
+.left p{
+  color:#cbd5e1;
+  font-size:18px;
+  max-width:600px;
+  line-height:1.7;
+  margin-bottom:35px;
+}
+
+.features{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+.feature{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:18px;
+  border-radius:20px;
+  width:190px;
+  backdrop-filter:blur(12px);
+}
+
+.feature h3{
+  margin-top:12px;
+  margin-bottom:8px;
+}
+
+.feature p{
+  font-size:13px;
+  margin:0;
+  line-height:1.5;
+}
+
+/* CARD */
+
+.card{
+  background:#ffffff;
+  border-radius:35px;
+  padding:35px;
+  color:#111827;
+  box-shadow:0 25px 60px rgba(0,0,0,0.4);
+}
+
+.card-top{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:30px;
+}
+
+.icon{
+  width:70px;
+  height:70px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#06b6d4,#3b82f6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  color:white;
+}
+
+.card-top h2{
+  font-size:26px;
+}
+
+.card-top p{
+  color:#6b7280;
+  font-size:14px;
+}
+
+label{
+  display:block;
+  margin-bottom:10px;
+  margin-top:18px;
+  font-weight:700;
+}
+
+input{
+  width:100%;
+  border:none;
+  background:#f1f5f9;
+  padding:16px;
+  border-radius:16px;
+  font-size:15px;
+}
+
+input:focus{
+  outline:2px solid #06b6d4;
+}
+
+.location-btn{
+  width:100%;
+  margin-top:14px;
+  border:none;
+  background:#0f172a;
+  color:white;
+  padding:15px;
+  border-radius:16px;
+  cursor:pointer;
+  font-weight:700;
+  transition:0.2s;
+}
+
+.location-btn:hover{
+  transform:scale(1.02);
+}
+
+.submit{
+  width:100%;
+  margin-top:28px;
+  border:none;
+  padding:18px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#06b6d4,#3b82f6);
+  color:white;
+  font-size:17px;
+  font-weight:800;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.submit:hover{
+  transform:translateY(-3px);
+}
+
+/* SERVICES */
+
+.services{
+  padding:90px 30px;
+  background:#0b1120;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.title h2{
+  font-size:48px;
+  margin-bottom:12px;
+}
+
+.title p{
+  color:#94a3b8;
+}
+
+.service-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+}
+
+.service{
+  background:#111827;
+  border-radius:30px;
+  overflow:hidden;
+  transition:0.3s;
+}
+
+.service:hover{
+  transform:translateY(-10px);
+}
+
+.service img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.service-info{
+  padding:25px;
+}
+
+.service-info h3{
+  margin-bottom:12px;
+  font-size:24px;
+}
+
+.service-info p{
+  color:#9ca3af;
+  line-height:1.6;
+}
+
+/* FOOTER */
+
+footer{
+  background:#020617;
+  padding:35px;
+  text-align:center;
+  color:#94a3b8;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:950px){
+
+  .container{
+    grid-template-columns:1fr;
+  }
+
+  .left{
+    text-align:center;
+  }
+
+  .left p{
+    margin:auto auto 35px;
+  }
+
+  .features{
+    justify-content:center;
+  }
+
+  .left h1{
+    font-size:50px;
+  }
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="left">
+
+<span>⭐ Motorista Premium 24h</span>
+
+<h1>
+Viaje com
+<b>segurança</b>
+e conforto.
+</h1>
+
+<p>
+Solicite corridas particulares online de forma rápida.
+Atendimento personalizado, localização automática
+e contato direto pelo WhatsApp.
+</p>
+
+<div class="features">
+
+<div class="feature">
+<div>📍</div>
+<h3>GPS Integrado</h3>
+<p>Sua localização enviada automaticamente.</p>
+</div>
+
+<div class="feature">
+<div>🚘</div>
+<h3>Motorista VIP</h3>
+<p>Viagens confortáveis e seguras.</p>
+</div>
+
+<div class="feature">
+<div>🕒</div>
+<h3>Agendamento</h3>
+<p>Marque sua corrida antecipadamente.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-top">
+
+<div class="icon">🚗</div>
+
+<div>
+<h2>Pedir Corrida</h2>
+<p>Atendimento imediato</p>
+</div>
+
+</div>
+
+<form id="rideForm">
+
+<label>Seu nome</label>
+<input
+type="text"
+id="nome"
+placeholder="Digite seu nome"
+required
+>
+
+<label>Onde você está?</label>
+<input
+type="text"
+id="origem"
+placeholder="Digite sua localização"
+required
+>
+
+<button
+type="button"
+class="location-btn"
+onclick="pegarLocalizacao()"
+>
+📍 Capturar localização
+</button>
+
+<label>Destino</label>
+<input
+type="text"
+id="destino"
+placeholder="Para onde deseja ir?"
+required
+>
+
+<label>Horário</label>
+<input
+type="datetime-local"
+id="horario"
+required
+>
+
+<button class="submit">
+CHAMAR MOTORISTA
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="services">
+
+<div class="title">
+<h2>Por que escolher nós?</h2>
+<p>Serviço profissional para qualquer ocasião.</p>
+</div>
+
+<div class="service-grid">
+
+<div class="service">
+<img src="imagens/AISelect_20260518_235124_Gallery.png" alt="carro">
+
+<div class="service-info">
+<h3>Conforto</h3>
+<p>Veículos modernos e climatizados para sua viagem.</p>
+</div>
+</div>
+
+<div class="service">
+<img src="imagens/AISelect_20260518_235151_Gallery.png" alt="carro">
+
+<div class="service-info">
+<h3>Atendimento</h3>
+<p>Motorista disponível com atendimento rápido.</p>
+</div>
+</div>
+
+<div class="service">
+<img src="imagens/AISelect_20260518_235204_Gallery.png" alt="carro">
+
+<div class="service-info">
+<h3>Segurança</h3>
+<p>Viagens seguras e acompanhamento em tempo real.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Driver Prime • Todos os direitos reservados
+</footer>
+
+<script>
+
+let linkMapa = "";
+
+const form = document.getElementById("rideForm");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const nome = document.getElementById("nome").value;
+const origem = document.getElementById("origem").value;
+const destino = document.getElementById("destino").value;
+const horario = document.getElementById("horario").value;
+
+const mensagem =
+`🚗 NOVA CORRIDA
+
+👤 Nome: ${nome}
+
+📍 Local:
+${origem}
+
+🗺️ GPS:
+${linkMapa}
+
+🏁 Destino:
+${destino}
+
+🕒 Horário:
+${horario}`;
+
+const numero = "5546920017301";
+
+const whatsappLink =
+`https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+window.open(whatsappLink, "_blank");
+
+});
+
+function pegarLocalizacao(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(
+
+function(position){
+
+const latitude = position.coords.latitude;
+const longitude = position.coords.longitude;
+
+linkMapa =
+`https://www.google.com/maps?q=${latitude},${longitude}`;
+
+document.getElementById("origem").value =
+"Localização capturada com sucesso ✅";
+
+},
+
+function(){
+
+alert("Não foi possível obter localização.");
+
+}
+
+);
+
+}else{
+
+alert("Seu navegador não suporta GPS.");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

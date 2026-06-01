@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Bella Nails</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fff8fb;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('https://images.unsplash.com/photo-1610992015732-2449b76344bc?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff4f9a;
+      color: white;
+      padding: 15px 35px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+      box-shadow: 0 10px 25px rgba(255,79,154,0.35);
+    }
+
+    .btn:hover {
+      transform: translateY(-4px);
+      background: #ff2c84;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .title h2 {
+      font-size: 2.5rem;
+      color: #ff2c84;
+      margin-bottom: 10px;
+    }
+
+    .title p {
+      color: #777;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 10px;
+      color: #ff2c84;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    .form-area {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
+
+    .form-box {
+      background: white;
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+    }
+
+    .form-box h3 {
+      margin-bottom: 25px;
+      color: #ff2c84;
+      font-size: 2rem;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group input,
+    .input-group textarea,
+    .input-group select {
+      width: 100%;
+      padding: 15px;
+      border-radius: 15px;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .input-group input:focus,
+    .input-group textarea:focus,
+    .input-group select:focus {
+      border-color: #ff4f9a;
+      box-shadow: 0 0 10px rgba(255,79,154,0.2);
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    .info-box {
+      color: #444;
+    }
+
+    .info-box h3 {
+      font-size: 2.5rem;
+      color: #ff2c84;
+      margin-bottom: 20px;
+    }
+
+    .info-box p {
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #ff2c84;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      text-decoration: none;
+      color: white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 2.7rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero">
+      <h1>Studio Bella Nails</h1>
+      <p>Unhas perfeitas, atendimento premium e muito estilo para valorizar sua beleza.</p>
+      <a href="#agendamento" class="btn">Agendar Horário</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="title">
+      <h2>Nossos Serviços</h2>
+      <p>Escolha o serviço ideal para você</p>
+    </div>
+
+    <div class="services">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1200&auto=format&fit=crop" alt="Alongamento">
+        <div class="card-content">
+          <h3>Alongamento</h3>
+          <p>Unhas lindas e resistentes com acabamento profissional.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1200&auto=format&fit=crop" alt="Esmaltação">
+        <div class="card-content">
+          <h3>Esmaltação em Gel</h3>
+          <p>Brilho intenso e duração prolongada para suas unhas.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1200&auto=format&fit=crop" alt="Spa">
+        <div class="card-content">
+          <h3>Spa das Mãos</h3>
+          <p>Relaxamento completo e hidratação especial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="title">
+      <h2>Galeria</h2>
+      <p>Veja alguns trabalhos realizados</p>
+    </div>
+
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1200&auto=format&fit=crop" alt="Unhas">
+      <img src="https://images.unsplash.com/photo-1619451334792-150fd785ee74?q=80&w=1200&auto=format&fit=crop" alt="Unhas">
+      <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=1200&auto=format&fit=crop" alt="Unhas">
+      <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?q=80&w=1200&auto=format&fit=crop" alt="Unhas">
+    </div>
+  </section>
+
+  <section id="agendamento">
+    <div class="form-area">
+
+      <div class="info-box">
+        <h3>Agende seu horário</h3>
+        <p>
+          Preencha o formulário e envie diretamente para o WhatsApp.
+          Atendimento personalizado e horários flexíveis.
+        </p>
+
+        <p>
+          ✔ Atendimento com hora marcada<br>
+          ✔ Ambiente confortável<br>
+          ✔ Produtos de qualidade premium
+        </p>
+      </div>
+
+      <div class="form-box">
+        <h3>Fazer Agendamento</h3>
+
+        <form id="whatsappForm">
+
+          <div class="input-group">
+            <input type="text" id="nome" placeholder="Seu nome" required>
+          </div>
+
+          <div class="input-group">
+            <input type="tel" id="telefone" placeholder="Seu telefone" required>
+          </div>
+
+          <div class="input-group">
+            <select id="servico" required>
+              <option value="">Selecione um serviço</option>
+              <option>Alongamento</option>
+              <option>Esmaltação em Gel</option>
+              <option>Banho de Gel</option>
+              <option>Manicure Completa</option>
+              <option>Spa das Mãos</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <input type="date" id="data" required>
+          </div>
+
+          <div class="input-group">
+            <textarea id="mensagem" placeholder="Observações"></textarea>
+          </div>
+
+          <button type="submit" class="btn" style="border:none; cursor:pointer; width:100%;">
+            Enviar no WhatsApp
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Studio Bella Nails - Todos os direitos reservados.</p>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5500000000000" target="_blank">
+    ✆
+  </a>
+
+  <script>
+    const form = document.getElementById('whatsappForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+      const servico = document.getElementById('servico').value;
+      const data = document.getElementById('data').value;
+      const mensagem = document.getElementById('mensagem').value;
+
+      const texto = `Olá! Quero agendar um horário.%0A%0A` +
+        `👤 Nome: ${nome}%0A` +
+        `📞 Telefone: ${telefone}%0A` +
+        `💅 Serviço: ${servico}%0A` +
+        `📅 Data: ${data}%0A` +
+        `📝 Observações: ${mensagem}`;
+
+      const numero = '5546920017301';
+
+      window.open(`https://wa.me/${numero}?text=${texto}`, '_blank');
+    });
+  </script>
+
+</body>
+</html>

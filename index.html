@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Portfólio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+      background:
+        linear-gradient(rgba(15, 23, 42, .75), rgba(15, 23, 42, .85)),
+        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      color: #cbd5e1;
+      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 12px;
+      background: #38bdf8;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #0ea5e9;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .title h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .title p {
+      color: #94a3b8;
+    }
+
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: .3s;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .3);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    .card-content p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .card-content a {
+      text-decoration: none;
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    .sobre {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .sobre img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+    }
+
+    .sobre-text h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .sobre-text p {
+      color: #cbd5e1;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .contato {
+      text-align: center;
+      background: #1e293b;
+      border-radius: 25px;
+      padding: 60px 20px;
+    }
+
+    .contato h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .contato p {
+      color: #cbd5e1;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+    }
+
+    @media(max-width:900px) {
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .sobre {
+        grid-template-columns: 1fr;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="hero">
+      <h1>Meu <span>Portfólio</span></h1>
+
+      <p>
+        Sites modernos, bonitos e profissionais criados para empresas,
+        motoristas, manicures, hamburguerias e muito mais.
+      </p>
+
+      <a href="#portfolio" class="btn">Ver Projetos</a>
+    </div>
+  </header>
+
+  <section id="portfolio">
+
+    <div class="title">
+      <h2>Meus Projetos</h2>
+      <p>Alguns exemplos de site que já desenvolvi</p>
+    </div>
+
+    <div class="portfolio">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Motorista Particular</h3>
+
+          <p>
+            Site profissional para motoristas divulgarem corridas,
+            viagens e atendimento via WhatsApp.
+          </p>
+
+          <a href="motorista.html">Ver Projeto</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Manicure</h3>
+
+          <p>
+            Site elegante para divulgar serviços, agendamentos,
+            galeria de unhas e contato rápido.
+          </p>
+
+          <a href="manicure.html">Ver Projeto</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Pousada</h3>
+
+          <p>
+            Site completo para pousadas e hotéis com galeria de fotos,
+            informações sobre acomodações, estrutura, reservas e
+            atendimento via WhatsApp.
+          </p>
+
+          <a href="pousada.html">Ver Projeto</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Barbearia</h3>
+
+          <p>
+            Site moderno para barbearias com apresentação de serviços,
+            galeria de fotos e sistema de agendamento integrado ao WhatsApp.
+          </p>
+
+          <a href="barbearia.html">Ver Projeto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+
+    <div class="sobre">
+
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="sobre-text">
+        <h2>Sobre Mim</h2>
+
+        <p>
+          Eu crio sites modernos, rápidos e profissionais para ajudar
+          empresas e profissionais a conseguirem mais clientes pela internet.
+        </p>
+
+        <p>
+          Trabalho com design moderno, integração com WhatsApp
+          e sites personalizados.
+        </p>
+
+        <a href="https://wa.me/5511999999999" class="btn">
+          Falar no WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <div class="contato">
+
+      <h2>Vamos Trabalhar?</h2>
+
+      <p>
+        Entre em contato para criar seu site profissional.
+      </p>
+
+      <a href="https://wa.me/5546920017301" class="btn">
+        Chamar no WhatsApp
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 - Meu Portfólio | Todos os direitos reservados
+  </footer>
+
+</body>
+
+</html>
